@@ -25,7 +25,7 @@
 			<plugin>
 				<groupId>org.graalvm.buildtools</groupId>
 				<artifactId>native-maven-plugin</artifactId>
-				<version>0.10.4</version>
+				<version>0.10.6</version>
 				<extensions>true</extensions>
 				<executions>
 					<execution>
@@ -43,6 +43,11 @@
 						<phase>test</phase>
 					</execution>
 				</executions>
+				<configuration>
+					<buildArgs>
+						<buildArg>-H:+ReportExceptionStackTraces</buildArg>
+					</buildArgs>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
